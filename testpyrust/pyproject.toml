@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "testpyrust"
+requires-python = ">=3.7"
+dependencies = ["fastapi", "uvicorn"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.scripts]
+goon = "testpyrust:app.main"
+
+[tool.maturin]
+python-source = "python"
+features = ["pyo3/extension-module"]
