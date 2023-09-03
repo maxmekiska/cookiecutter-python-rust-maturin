@@ -9,7 +9,11 @@ Maturin Python Rust Mix template.
 - pip install maturin
 - run `maturin new --mixed <your path\nameOfYourLibrary>`
 - test via: 
-    - `maturin develop`
+    - `maturin develop` or
     - `maturin build --interpreter python` + `pip install .`
 
 
+## Build as a Microservice
+
+- `docker build -t my-microservice .`
+- `docker run -d -p 8000:8000 --name your-flask-app-container my-microservice`
