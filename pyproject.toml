@@ -3,9 +3,12 @@ requires = ["maturin>=1.2,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "testpyrust"
-requires-python = ">=3.7"
-dependencies = ["fastapi", "uvicorn"]
+name = "rustpytemplate"
+requires-python = ">3.7"
+dependencies = [
+    "fastapi>=0.103.0,<0.104.0",
+    "uvicorn>=0.23.2,<0.24.0"
+    ]
 classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
@@ -13,7 +16,7 @@ classifiers = [
 ]
 
 [project.scripts]
-goon = "testpyrust:app.main"
+micro-launch = "rustpytemplate:app.main"
 
 [tool.maturin]
 python-source = "python"
