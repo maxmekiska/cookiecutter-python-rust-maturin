@@ -20,7 +20,7 @@ Both modes can be used with no changes.
 ## Build as a Microservice
 
 - `docker build -t my-microservice .`
-- `docker run -d -p 8000:8000 --name your-flask-app-container my-microservice`
+- `docker run -d -p 8000:8000 --name test-service my-microservice`
 
 
 

@@ -11,6 +11,11 @@ def test_read_root():
     assert response.json() == {"message": "Hello, World!"}
 
 
+def test_heartbeat_endpoint():
+    response = client.get("/heartbeat/")
+    assert response.status_code == 200
+
+
 def test_run_sum_endpoint():
     response = client.get("/run/sum/1/2")
     assert response.status_code == 200
