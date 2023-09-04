@@ -1,5 +1,5 @@
 import pytest
-from rustpytemplate.utils.fake import show_diff, show_sum
+from {{cookiecutter.package_name}}.utils.fake import show_diff, show_sum
 
 
 def test_show_sum():

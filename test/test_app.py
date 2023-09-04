@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-from rustpytemplate.app import *
+from {{cookiecutter.package_name}}.app import *
 
 client = TestClient(app)
 

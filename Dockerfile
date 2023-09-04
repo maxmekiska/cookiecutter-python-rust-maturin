@@ -1,4 +1,4 @@
-FROM python:3.11-slim AS builder
+FROM python:{{cookiecutter.python_version}}-slim AS builder
 
 
 RUN apt-get update && apt-get install -y build-essential curl

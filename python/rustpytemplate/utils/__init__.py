@@ -1,0 +1,1 @@
+from {{cookiecutter.package_name}}.utils.fake import show_sum, show_diff 

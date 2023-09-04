@@ -3,8 +3,8 @@ from datetime import datetime
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from rustpytemplate.observer.tracker import track
-from rustpytemplate.utils.fake import show_diff, show_sum
+from {{cookiecutter.package_name}}.observer.tracker import track
+from {{cookiecutter.package_name}}.utils.fake import show_diff, show_sum
 
 app = FastAPI()
 

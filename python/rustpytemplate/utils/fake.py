@@ -1,4 +1,4 @@
-from rustpytemplate import diff_as_string, sum_as_string
+from {{cookiecutter.package_name}} import diff_as_string, sum_as_string
 
 
 def show_sum(a, b):

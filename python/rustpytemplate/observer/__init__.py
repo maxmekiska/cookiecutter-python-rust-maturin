@@ -1,1 +1,1 @@
-from rustpytemplate.observer.tracker import track
+from {{cookiecutter.package_name}}.observer.tracker import track

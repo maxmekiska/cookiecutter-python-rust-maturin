@@ -3,7 +3,7 @@ requires = ["maturin>=1.2,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "rustpytemplate"
+name = "{{cookiecutter.package_name}}"
 requires-python = ">3.7"
 dependencies = [
     "fastapi>=0.103.0,<0.104.0",
@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 [project.scripts]
-micro-launch = "rustpytemplate:app.main"
+micro-launch = "{{cookiecutter.package_name}}:app.main"
 
 [tool.maturin]
 python-source = "python"
