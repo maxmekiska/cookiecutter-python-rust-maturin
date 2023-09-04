@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster AS builder
+FROM python:3.11-slim AS builder
 
 
 RUN apt-get update && apt-get install -y build-essential curl
