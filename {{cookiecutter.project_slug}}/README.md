@@ -1,4 +1,4 @@
-# Python on Steroids
+# Python on Steroids Template
 
 Enhanced maturin python rust mix template. The template supports two modes:
 
@@ -21,6 +21,24 @@ Both modes can be used with no changes.
 
 - `docker build -t my-microservice .`
 - `docker run -d -p 8000:8000 --name test-service my-microservice`
+
+### Send example requests via curl
+
+`/heartbeat/`
+```
+curl http://127.0.0.1:8000/heartbeat/
+```
+
+`/run/sum/{a}/{b}`
+```
+curl http://127.0.0.1:8000/run/sum/5/7
+```
+
+
+`/run/diff/{a}/{b}`
+```
+curl http://127.0.0.1:8000/run/diff/5/7
+```
 
 
 
