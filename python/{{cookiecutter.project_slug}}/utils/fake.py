@@ -1,4 +1,4 @@
-from {{cookiecutter.package_name}} import diff_as_string, sum_as_string
+from {{cookiecutter.project_slug}} import diff_as_string, sum_as_string
 
 
 def show_sum(a, b):

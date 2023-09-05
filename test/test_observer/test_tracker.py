@@ -3,7 +3,7 @@ import logging
 import sys
 
 import pytest
-from {{cookiecutter.package_name}}.observer.tracker import track
+from {{cookiecutter.project_slug}}.observer.tracker import track
 
 
 @pytest.fixture
