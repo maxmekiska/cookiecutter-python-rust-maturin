@@ -1,13 +1,13 @@
-# Python On Steroids Template
+# Cookiecutter Python Rust Maturin Template
 
 Please run the following commands to use this template:
 
 - `pip install cookiecutter`
-- `cookicuter https://github.com/maxmekiska/python-on-steroids`
+- `cookicuter https://github.com/maxmekiska/cookiecutter-python-rust-maturin`
 
 ## Overview
 
-Enhanced maturin python rust template. The template supports two modes:
+Enhanced maturin python rust template. The template supports two main modes:
 
 1. python library mode
 2. microservice mode
@@ -63,6 +63,10 @@ curl -X 'POST' \
 }'
 ```
 
+## Format and Test via tox
+
+- install tox via: `pip install tox`
+- run tox via: `tox`
 
 
 ## Appendix
