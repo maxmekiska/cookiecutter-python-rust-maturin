@@ -7,7 +7,7 @@ Please run the following commands to use this template:
 
 ## Overview
 
-Enhanced maturin python rust mix template. The template supports two modes:
+Enhanced maturin python rust template. The template supports two modes:
 
 1. python library mode
 2. microservice mode
@@ -24,6 +24,8 @@ Both modes can be used with no changes.
         - build package wheel via: `maturin build --interpreter python`
         - `pip install .`
 
+You can still run the library in microservice mode via the command: `micro-launch`
+
 ## Build as a Microservice
 
 - `docker build -t my-microservice .`
@@ -36,15 +38,29 @@ Both modes can be used with no changes.
 curl http://127.0.0.1:8000/heartbeat/
 ```
 
-`/run/sum/{a}/{b}`
+`/run/sum/`
 ```
-curl http://127.0.0.1:8000/run/sum/5/7
+curl -X 'POST' \
+  'http://localhost:8000/run/sum/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "a": 1,
+  "b": 2
+}'
 ```
 
 
-`/run/diff/{a}/{b}`
+`/run/diff/`
 ```
-curl http://127.0.0.1:8000/run/diff/5/7
+curl -X 'POST' \
+  'http://localhost:8000/run/diff/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "a": 2,
+  "b": 1
+}'
 ```
 
 
