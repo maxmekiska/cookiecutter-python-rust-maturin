@@ -4,8 +4,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from {{cookiecutter.project_slug}}.observer.tracker import track
+from {{cookiecutter.project_slug}}.schemas.model import SumRequest, DiffRequest
 from {{cookiecutter.project_slug}}.utils.fake import show_diff, show_sum
-from {{cookiecutter.project_slug}}.schemas.models import SumRequest, DiffRequest
 
 app = FastAPI()
 
@@ -30,12 +30,12 @@ def heartbeat():
         f'Micro Service Alive at: {datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")}'
     }
 
-@app.get("/run/sum/")
+@app.post("/run/sum/")
 async def run_sum(request: SumRequest):
     track.info(f"SUM endpoint received request with params: {request.a}, {request.b}")
     return {"message": f"show_sum({request.a}, {request.b}) = {show_sum(request.a, request.b)}"}
 
-@app.get("/run/diff/")
+@app.post("/run/diff/")
 async def run_diff(request: DiffRequest):
     track.info(f"DIFF endpoint received request with params: {request.a}, {request.b}")
     return {"message": f"show_diff({request.a}, {request.b}) = {show_diff(request.a, request.b)}"}

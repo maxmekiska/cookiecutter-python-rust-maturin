@@ -17,15 +17,19 @@ def test_heartbeat_endpoint():
 
 
 def test_run_sum_endpoint():
-    response = client.get("/run/sum/1/2")
+    request_data = {"a": 1, "b": 2}
+    response = client.post("/run/sum/", json=request_data)
+
     assert response.status_code == 200
-    assert response.json() == {"message": "show_sum(1,2) = 3"}
+    assert response.json() == {"message": "show_sum(1, 2) = 3"}
 
 
 def test_run_diff_endpoint():
-    response = client.get("/run/diff/2/1")
+    request_data = {"a": 2, "b": 1}
+    response = client.post("/run/diff/", json=request_data)
+
     assert response.status_code == 200
-    assert response.json() == {"message": "show_diff(2,1) = 1"}
+    assert response.json() == {"message": "show_diff(2, 1) = 1"}
 
 
 if __name__ == "__main__":

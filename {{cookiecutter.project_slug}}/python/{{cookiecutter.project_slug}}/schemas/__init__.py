@@ -1,1 +1,1 @@
-from {{cookiecutter.project_slug}}.schemas.model import SumRequest, DiffReqeust
+from {{cookiecutter.project_slug}}.schemas.model import SumRequest, DiffRequest
