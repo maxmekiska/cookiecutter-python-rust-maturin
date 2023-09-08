@@ -3,6 +3,7 @@ import logging
 import sys
 
 import pytest
+
 from {{cookiecutter.project_slug}}.observer.tracker import track
 
 
