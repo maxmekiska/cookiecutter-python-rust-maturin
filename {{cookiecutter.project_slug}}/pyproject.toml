@@ -22,3 +22,6 @@ micro-launch = "{{cookiecutter.project_slug}}:app.main"
 [tool.maturin]
 python-source = "python"
 features = ["pyo3/extension-module"]
+
+[tool.black]
+line-length = 78

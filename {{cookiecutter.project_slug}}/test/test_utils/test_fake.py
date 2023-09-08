@@ -1,4 +1,3 @@
-import pytest
 from {{cookiecutter.project_slug}}.utils.fake import show_diff, show_sum
 
 

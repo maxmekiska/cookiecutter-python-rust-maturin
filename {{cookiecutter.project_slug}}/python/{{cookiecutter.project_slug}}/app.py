@@ -33,12 +33,14 @@ def heartbeat():
 @app.post("/run/sum/")
 async def run_sum(request: SumRequest):
     track.info(f"SUM endpoint received request with params: {request.a}, {request.b}")
-    return {"message": f"show_sum({request.a}, {request.b}) = {show_sum(request.a, request.b)}"}
+    return {"message": f"show_sum({request.a}, {request.b})"
+            f" = {show_sum(request.a, request.b)}"}
 
 @app.post("/run/diff/")
 async def run_diff(request: DiffRequest):
     track.info(f"DIFF endpoint received request with params: {request.a}, {request.b}")
-    return {"message": f"show_diff({request.a}, {request.b}) = {show_diff(request.a, request.b)}"}
+    return {"message": f"show_diff({request.a}, {request.b})"
+            f" = {show_diff(request.a, request.b)}"}
 
 def main():
     uvicorn.run(app, host="0.0.0.0", port=8000)
